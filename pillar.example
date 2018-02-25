@@ -1,9 +1,13 @@
 oh-my-zsh:
-    user:
-        - name: vagrant
-        - group: vagrant
-        - home: /home/vagrant
-    theme: af-magic
-    auto-update: false
-    disable-untracked-files-dirty: true
-    plugins: git
+  theme: af-magic
+  auto-update: false
+  disable-untracked-files-dirty: true
+  plugins: git
+  user:
+    - name: vagrant
+      group: vagrant
+      home: /home/vagrant
+      theme: awesomepanda
+    - name: ernst
+      group: sudo
+      home: /home/ernst
