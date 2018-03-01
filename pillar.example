@@ -3,7 +3,7 @@ oh-my-zsh:
   auto-update: false
   disable-untracked-files-dirty: true
   plugins: git
-  user:
+  users:
     - name: vagrant
       group: vagrant
       home: /home/vagrant

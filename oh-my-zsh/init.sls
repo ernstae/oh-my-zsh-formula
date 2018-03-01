@@ -1,7 +1,7 @@
 include: 
     - oh-my-zsh.zsh
 
-{% for uname in salt['pillar.get']('oh-my-zsh:user', {}) %}
+{% for uname in salt['pillar.get']('oh-my-zsh:users', {}) %}
 change_shell_{{ uname }}:
   module.run:
     - name: user.chshell
@@ -19,7 +19,7 @@ zshrc_{{ uname }}:
   file.managed:
     - name: "{{ uname.home }}/.zshrc"
     - source: salt://oh-my-zsh/files/.zshrc
-    - user: {{ uname.user }}
+    - user: {{ uname.name }}
     - group: {{ uname.group }}
     - mode: '0644'
     - template: jinja
